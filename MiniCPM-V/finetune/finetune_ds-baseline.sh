@@ -26,7 +26,7 @@ MODEL="openbmb/MiniCPM-Llama3-V-2_5"
 # See the section for finetuning in README for more information.
 DATA="/data/pandayin/data/minicpm-full-video-24frames-200k.json"
 LLM_TYPE="llama3" # if use openbmb/MiniCPM-V-2, please set LLM_TYPE=minicpm, if use openbmb/MiniCPM-Llama3-V-2_5, please set LLM_TYPE="llama3"
-MODEL_MAX_Length=8666 # if conduct multi-images sft, please set MODEL_MAX_Length=4096
+MODEL_MAX_Length=10740 # if conduct multi-images sft, please set MODEL_MAX_Length=4096
 
 
 DISTRIBUTED_ARGS="

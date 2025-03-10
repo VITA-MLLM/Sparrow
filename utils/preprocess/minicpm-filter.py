@@ -52,7 +52,7 @@ for sample in tqdm(orig_data):
     video_frame_list = sorted(glob(os.path.join(video_dir, '*')))
     frame_count = len(os.listdir(video_dir))
     # filter according to frame length
-    if frame_count > 90: continue
+    if frame_count > 100: continue
     # check video correspondence
     if (count_video(sample['conversations']) != 1) or ("<video>" not in sample['conversations'][0]['value']): continue
 
@@ -65,7 +65,7 @@ for sample in tqdm(orig_data):
     token_length += 96 * frame_count
 
     # filter according to token length
-    if token_length > 8192: continue 
+    if token_length > 10240: continue 
 
     prefix_prompt = ""
     image_mapping_dict = {}

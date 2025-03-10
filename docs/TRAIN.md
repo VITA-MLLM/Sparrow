@@ -66,8 +66,6 @@ We also provide the jsonl files of the first two video datasets arranged by us:
     Considering compute efficiency, we filtered out data samples by pre-computing and limiting the frame numbers & total context length:
 
     - For MiniCPM-V:  Check [minicpm-filter.py](https://github.com/xjtupanda/T2Vid/blob/main/utils/preprocess/minicpm-filter.py)
-    - For Idefics3: Check [idefics-filter.py](https://github.com/xjtupanda/T2Vid/blob/main/utils/preprocess/idefics-filter.py)
-
 
     </details>
 
@@ -79,10 +77,10 @@ Run the scripts
 - `finetune_ds.sh` (30K mix data) 
 - `finetune_ds-baseline.sh` (200K video data)
 
-  in the folder `Idefics3/finetune/` or  `MiniCPM-V/finetune/`.
+  in the folder `MiniCPM-V/finetune/`.
 
-For example, to fine-tune Idefics3 on 30K mix data, run:
+For example, to fine-tune MiniCPM-V on 30K mix data, run:
 ```Shell
-cd Idefics3/finetune/
+cd MiniCPM-V/finetune/
 bash finetune_ds.sh
 ```
