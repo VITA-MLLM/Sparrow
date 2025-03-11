@@ -26,11 +26,17 @@
 
 🚀 **Train less, achieve more:** By mixing in our synthetic data, one can achieve comparable or better performance with much fewer samples.
 
-![Result Figure](assets/teaser.png)
+<p align="center">
+    <img src="assets/teaser.png" width="70%" height="70%">
+</p>
+
 
 🚀 **Boost long video understanding "for free":** Improvement in long video understanding without training with any long video data.
 
-![Long Result Figure](assets/long-perf.png)
+<p align="center">
+    <img src="assets/long-perf.png">
+</p>
+
 
 ## 🛠️ Quick Setup
 
