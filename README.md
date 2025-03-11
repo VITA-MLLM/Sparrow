@@ -79,9 +79,9 @@ For those interested in the implementation details of our paper:
 
 If you find our project useful, please consider citing our paper:
 ```
-@article{yin2024t2vid,
-  title={T2Vid: Translating Long Text into Multi-Image is the Catalyst for Video-LLMs},
-  author={Yin, Shukang and Fu, Chaoyou and Zhao, Sirui and Shen, Yunhang and Ge, Chunjiang and Yang, Yan and Long, Zuwei and Dai, Yuhan and Xu, Tong and Sun, Xing and others},
+@article{yin2024sparrow,
+  title={Sparrow: Data-Efficient Video-LLM with Text-to-Image Augmentation},
+  author={Yin, Shukang and Fu, Chaoyou and Zhao, Sirui and Shen, Yunhang and Ge, Chunjiang and Yang, Yan and Long, Zuwei and Dai, Yuhan and Luo, Yongdong and Cao, Haoyu and others},
   journal={arXiv preprint arXiv:2411.19951},
   year={2024}
 }
