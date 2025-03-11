@@ -5,7 +5,7 @@
 </h1>
 
 <p align="center">
-       &nbsp&nbsp 📑 <a href="https://arxiv.org/pdf/2411.19951">Paper</a> &nbsp&nbsp  </a> |  &nbsp&nbsp 🤗 <a href="https://huggingface.co/collections/xjtupanda/t2vid-673f104cdaf4ac3340b15964">Hugging Face</a>&nbsp&nbsp 
+       &nbsp&nbsp 📑 <a href="https://arxiv.org/pdf/2411.19951">Paper</a> &nbsp&nbsp  </a> |  &nbsp&nbsp 🤗 <a href="https://huggingface.co/collections/xjtupanda/sparrow-673f104cdaf4ac3340b15964">Hugging Face</a>&nbsp&nbsp 
 </p>
 
 **TL;DR:** *We proposed a data augmentation method (synthesizing "video" samples from long QA text data) to enrich the instruction diversity of video data, which facilitates more efficient training with comparable performance.*
@@ -26,20 +26,11 @@
 
 🚀 **Train less, achieve more:** By mixing in our synthetic data, one can achieve comparable or better performance with much fewer samples.
 
-![Result Figure](assets/minicpm-scale.png)
+![Result Figure](assets/teaser.png)
 
 🚀 **Boost long video understanding "for free":** Improvement in long video understanding without training with any long video data.
 
-|  | Video-MME-L | LongVideoBench | MLVU |
-| :--- | :---: | :---: | :---: |
-| MiniCPM-V-2.5-8B<br><sub>zero-shot</sub> | 40.1 | 40.0 | 44.5 |
-| MiniCPM-V-2.5-8B<br><sub>30K video data</sub> | 44.7 | 39.7 | 45.4 |
-| MiniCPM-V-2.5-8B<br><sub>60K video data</sub> | 46.2 | 42.7 | 46.2 |
-| MiniCPM-V-2.5-8B<br><sub>100K video data</sub> | 46.7 | 44.1 | 45.3 |
-|  |  |  |  |
-| **MiniCPM-V-2.5-8B<br><sub>30K data (1/3 our synthetic)</sub>** | 45.6<br><sub>**(+0.9)**</sub><br> | 48.7<br><sub>**(+9.0)**</sub><br> | 51.4<br><sub>**(+6.0)**</sub><br> |
-| **MiniCPM-V-2.5-8B<br><sub>60K data (1/3 our synthetic)</sub>** | 46.2<br><sub>**(-)**</sub><br> | 51.2<br><sub>**(+8.5)**</sub><br> | **53.2**<br><sub>**(+7.0)**</sub><br> |
-| **MiniCPM-V-2.5-8B<br><sub>100K data (1/3 our synthetic)</sub>** | 48.7<br><sub>**(+2.0)**</sub><br> | 50.1<br><sub>**(+6.0)**</sub><br> | 57.0<br><sub>**(+11.7)**</sub><br> |
+![Long Result Figure](assets/long-perf.png)
 
 ## 🛠️ Quick Setup
 
