@@ -14,12 +14,6 @@ BASE_DIR="../../benchmarks/mvbench"
 NUM_FRAMES=$3
 
 
-LOG=${OUTPUT_DIR}/eval_mvbench_${NUM_FRAMES}frame.log
-# Clear out the log file if it exists.
-> "$LOG"
-exec &> >(tee -a "$LOG")
-
-
 for IDX in $(seq 0 $((CHUNKS-1))); do
     CUDA_VISIBLE_DEVICES=${GPULIST[$IDX]} python -m model_video_qa_loader \
         --model-path $CKPTFILE \
@@ -46,12 +40,6 @@ for IDX in $(seq 0 $((CHUNKS-1))); do
     cat ${BASE_DIR}/answers/$CKPT/${CHUNKS}_${IDX}.jsonl >> "$output_file"
 done
 
-
-
-LOG_1=${OUTPUT_DIR}/eval_result_mvbench_${NUM_FRAMES}frame.log 
-# Clear out the log file if it exists.
-> "${LOG_1}"
-exec &> >(tee -a "${LOG_1}")
 
 for IDX in $(seq 0 $((CHUNKS-1))); do
    CUDA_VISIBLE_DEVICES=${GPULIST[$IDX]} python -u parse_answer_with_llm.py \

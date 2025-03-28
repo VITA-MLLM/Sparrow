@@ -11,10 +11,17 @@ benchmarks
 │   ├── video
 │   └── mvbench.jsonl
 └── TempCompass
-    ├── videos
-    └── TempCompass.jsonl
+│   ├── videos
+│   └── TempCompass.jsonl
+├── LongVideoBench
+│   ├── videos
+│   ├── subtitles
+│   └── lvb_val.json
+└── MLVU
+    ├── video
+    └── mlvu.jsonl
 ```
-We have provided processed jsonl files of MVBench and TempCompass for easier reproduction.
+We have provided processed jsonl files of MVBench, TempCompass, and MLVU for easier reproduction.
 For full files (such as videos), please refer to the official guidelines to (apply and) download.
 
 ### Video-MME
@@ -29,6 +36,14 @@ https://github.com/xjtupanda/T2Vid/blob/9bc94103f953ba2bfd9a267f652247b0765d9baa
 ### TempCompass
 1. Download the videos at [tempcompass_videos.zip](https://huggingface.co/datasets/lmms-lab/TempCompass/blob/main/tempcompass_videos.zip).
 2. Unzip the file and put all the videos in `videos` folder.
+
+### LongVideoBench
+1. Download the files at [Link](https://huggingface.co/datasets/longvideobench/LongVideoBench).
+2. Follow the instructions and extract the tar files, including `videos.tar` and `subtitles.tar`.
+
+### MLVU
+1. Download the videos at [Link](https://huggingface.co/datasets/MLVU/MVLU).
+2. Put all the videos in `video` folder.
 
 ## Evaluation
 

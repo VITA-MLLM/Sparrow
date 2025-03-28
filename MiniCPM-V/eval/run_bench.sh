@@ -9,12 +9,10 @@ if [ ! -d "$OUTPUT_DIR" ]; then
   mkdir -p "$OUTPUT_DIR"
 fi
 
-LOG=${OUTPUT_DIR}/multi-bench-evaluation_log.txt 
-#
-# Clear out the log file if it exists.
-> "$LOG"
-exec &> >(tee -a "$LOG")
 
 bash video-mme.sh ${CKPT} ${CKPT_FILE} ${NUM_FRAMES}
 bash mvbench.sh ${CKPT} ${CKPT_FILE} ${NUM_FRAMES}
 bash temp-compass.sh ${CKPT} ${CKPT_FILE} ${NUM_FRAMES}
+bash mlvu.sh ${CKPT} ${CKPT_FILE} ${NUM_FRAMES}
+bash lvbench.sh ${CKPT} ${CKPT_FILE} ${NUM_FRAMES}
+
