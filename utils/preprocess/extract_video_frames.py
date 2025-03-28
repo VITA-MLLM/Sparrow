@@ -1,21 +1,11 @@
-import json
 import os
-import shutil
 from tqdm import tqdm
 import glob
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
-def read_json(file):
-    with open(file, 'r') as f:
-        data = json.load(f)
-    return data
-
-def write_json(path, data):
-    with open(path, 'w', encoding='utf-8') as f:
-        json.dump(data, f, indent=4, ensure_ascii=False)
 
 # for video-mme
-
 # for category in Path('./').iterdir():
 #     if not category.is_dir(): continue
 #     for video_type in category.iterdir():
@@ -30,16 +20,24 @@ def write_json(path, data):
 #             os.system(extracted_command)
            
 
-# for share-gemini and video-chatgpt
 
-video_file_list = glob.glob('./Activity_Videos/*', recursive=True)
-for video_file in tqdm(video_file_list):
-    video_path = os.path.basename(video_file)
-    video_path, ext = os.path.splitext(video_path)
-    
-    save_path = os.path.join("extracted_frames/", video_path)
-    if not os.path.exists(save_path):
-        os.makedirs(save_path, exist_ok=True)
-    
-    extracted_command = f"ffmpeg -i {video_file} -vf fps=1 {save_path}/frame_%04d.png"
+
+def extract_frames(video_file):
+    save_path = os.path.join('extracted_frames', '/'.join(os.path.splitext(video_file)[0].split('/')[1:]))
+    os.makedirs(save_path, exist_ok=True)
+    # if os.path.exists(save_path): 
+    #     return
+
+    extracted_command = f"ffmpeg -hwaccel cuda -i {video_file} -vf fps=1 {save_path}/frame_%04d.png"    # use gpu to speed up
+    #extracted_command = f"ffmpeg -i {video_file} -vf fps=1 {save_path}/frame_%04d.png"     # cpu calculation. much slower.
     os.system(extracted_command)
+
+all_video_files = glob('Activity_Videos/*') # for Video-ChatGPT
+all_video_files += glob('sharegemini-core100k_video/*/*') # for ShareGemini
+
+with ThreadPoolExecutor(max_workers=64) as executor: 
+    futures = [executor.submit(extract_frames, video_file) for video_file in all_video_files]
+
+    
+    for future in tqdm(as_completed(futures), total=len(futures)):
+        future.result() 
