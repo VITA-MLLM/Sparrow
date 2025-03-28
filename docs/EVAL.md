@@ -48,7 +48,7 @@ https://github.com/xjtupanda/T2Vid/blob/9bc94103f953ba2bfd9a267f652247b0765d9baa
 ## Evaluation
 
 **Note:**
-Please eval using a newer version of Transformers.
+Please eval with a newer version of Transformers.
 This is due to a incompatibility between the versions of MiniCPM-V (Training at ver. 4.40.0) and LLaMA-3.1 (For eval, Ver.4.46.1).
 ```shell
 pip install transformers==4.46.1
