@@ -55,7 +55,7 @@ We also provide the jsonl files of the first two video datasets arranged by us:
     </details>
 
 
-    We also provide a simple script of [format conversion](https://github.com/VITA-MLLM/Sparrow/blob/main/utils/preprocess/reformat_json.py) for reference.
+    We also provide a simple script of [format conversion](https://github.com/VITA-MLLM/Sparrow/blob/main/utils/preprocess/reformat_video_json.py) for reference.
 
     <details>
       <summary>
