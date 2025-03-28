@@ -58,10 +58,10 @@ The instructions on training and evaluation (*including pre-trained weights*) ar
 
 ## 📖  Misc
 For those interested in the implementation details of our paper:
-- How to translate text into images? Check [t2vid.py](https://github.com/xjtupanda/T2Vid/blob/main/utils/text-to-images/t2vid.py).
+- How to translate text into images? Check [text-to-images](https://github.com/VITA-MLLM/Sparrow/blob/main/utils/text-to-images/).
 - How to visualize the distribution of instructions? 
-  - Calculate embeddings and perform dimensionality reduction for instructions: [calc_inst_embeddings.py](https://github.com/xjtupanda/T2Vid/blob/main/utils/visualization/calc_inst_embeddings.py).
-  - Draw plots: [vis-tsne.ipynb](https://github.com/xjtupanda/T2Vid/blob/main/utils/visualization/vis-tsne.ipynb).
+  - Calculate embeddings and perform dimensionality reduction for instructions: [calc_inst_embeddings.py](https://github.com/VITA-MLLM/Sparrow/blob/main/utils/visualization/calc_inst_embeddings.py).
+  - Draw plots: [vis-tsne.ipynb](https://github.com/VITA-MLLM/Sparrow/blob/main/utils/visualization/vis-tsne.ipynb).
 
 
 ## 🙌 Related Projects

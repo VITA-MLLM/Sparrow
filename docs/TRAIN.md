@@ -20,7 +20,7 @@ We also provide the jsonl files of the first two video datasets arranged by us:
 
 1. Extract video frames at an FPS of 1.
 
-    Check [extract_video_frames.py](https://github.com/xjtupanda/T2Vid/blob/main/utils/preprocess/extract_video_frames.py).
+    Check [extract_video_frames.py](https://github.com/VITA-MLLM/Sparrow/blob/main/utils/preprocess/extract_video_frames.py).
 
 2. Organize the format of training data.
 
@@ -55,7 +55,7 @@ We also provide the jsonl files of the first two video datasets arranged by us:
     </details>
 
 
-    We also provide a simple script of [format conversion](https://github.com/xjtupanda/T2Vid/blob/main/utils/preprocess/reformat_json.py) for reference.
+    We also provide a simple script of [format conversion](https://github.com/VITA-MLLM/Sparrow/blob/main/utils/preprocess/reformat_json.py) for reference.
 
     <details>
       <summary>
@@ -65,7 +65,7 @@ We also provide the jsonl files of the first two video datasets arranged by us:
 
     Considering compute efficiency, we filtered out data samples by pre-computing and limiting the frame numbers & total context length:
 
-    - For MiniCPM-V:  Check [minicpm-filter.py](https://github.com/xjtupanda/T2Vid/blob/main/utils/preprocess/minicpm-filter.py)
+    - For MiniCPM-V:  Check [minicpm-filter.py](https://github.com/VITA-MLLM/Sparrow/blob/main/utils/preprocess/minicpm-filter.py)
 
     </details>
 
